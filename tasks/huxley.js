@@ -25,6 +25,7 @@ module.exports = function(grunt) {
     function doneCallback(err) {
       if (err) {
         grunt.log.error(err);
+        grunt.event.emit('huxley.fail');
         return done(false);
       }
       done();
